@@ -1,0 +1,118 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --orbit:300px;
+    --size:20px;
+    --time:10s;
+
+}
+.container{
+    background-image: url("img1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover; 
+     height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    /* background-color: aqua; */
+}
+.sun{
+    width: 70px;
+    height: 70px;
+    background-color: yellow;
+    border-radius: 50%;
+    position: relative;
+    
+}
+.mercury{
+    width: calc(var(--size)*0.38);
+    height: calc(var(--size)*0.38);
+    background-color: red;
+    border-radius: 50%;
+    position: absolute;
+    --orbitt: calc(var(--orbit)*0.369);
+    animation:animate calc(var(--time)*0.24) linear infinite;
+}
+.venus{
+    width: calc(var(--size)*0.9);
+    height: calc(var(--size)*0.9);
+    background-color:green;
+    border-radius: 50%;
+    position: absolute;
+    --orbitt: calc(var(--orbit)*0.62);
+    animation:animate calc(var(--time)*0.62) linear infinite;
+
+}
+.earth{
+    width: calc(var(--size)*1);
+    height: calc(var(--size)*1);
+    background-color: blue;
+    border-radius: 50%;
+    position:absolute;
+    --orbitt: calc(var(--orbit)*1);
+    animation:animate calc(var(--time)*1) linear infinite;
+
+}
+.mars{
+    width: calc(var(--size)*0.53);
+    height: calc(var(--size)*0.53);
+    background-color: purple;
+    border-radius: 50%;
+    position: relative;
+    --orbitt: calc(var(--orbit)*2);
+    animation:animate calc(var(--time)*2) linear infinite;
+
+}
+.jupiter{
+    width: calc(var(--size)*11.21);
+    height: calc(var(--size)*11.21);
+    background-color:white;
+    border-radius: 50%;
+    position: relative;
+    --orbitt: calc(var(--orbit)*3);
+    animation:animate calc(var(--time)*6) linear infinite;
+}
+.satrun{
+    width: calc(var(--size)*9.45);
+    height: calc(var(--size)*9.45);
+    background-color: aqua;
+    border-radius: 50%;
+    position: relative;
+    --orbitt: calc(var(--orbit)*5);
+    animation:animate calc(var(--time)*8) linear infinite;
+
+}
+.uranus{
+    width: calc(var(--size)*4.01);
+    height: calc(var(--size)*4.01);
+    background-color: rgb(42, 134, 255);
+    border-radius: 50%;
+    position: relative;
+    --orbitt: calc(var(--orbit)*8);
+    animation:animate calc(var(--time)*12) linear infinite;
+
+}
+.neptune{
+    width: calc(var(--size)*3.88);
+    height: calc(var(--size)*3.88);
+    background-color: yellow;
+    border-radius: 50%;
+    position: relative;
+    --orbitt: calc(var(--orbit)*9);
+    animation:animate calc(var(--time)*15) linear infinite;
+
+}
+@keyframes animate {
+    0%{
+        transform: rotate(0deg) translateX(var(--orbitt));
+    }
+    100%{
+        transform: rotate(360deg) translateX(var(--orbitt));
+    }
+    
+}
